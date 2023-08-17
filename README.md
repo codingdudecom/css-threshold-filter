@@ -19,9 +19,21 @@ There are many applications that have a threshold tool including Photoshop, GIMP
 
 ## CSS Threshold Filter Code
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gOQVWGK" data-user="inegoita" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/inegoita/pen/gOQVWGK">
-  CSS Threshold Filter</a> by Ion Emil Negoita (<a href="https://codepen.io/inegoita">@inegoita</a>)
+<span>See the Pen <a href="https://codepen.io/inegoita/pen/gOQVWGK">
+  CSS Threshold Filter</a> by CodingDude (<a href="https://codepen.io/inegoita">@inegoita</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+[![CSS Threshold Filter](https://www.coding-dude.com/wp/wp-content/uploads/2023/08/css-threshold-filter.jpg)](https://codepen.io/inegoita/pen/gOQVWGK)
+
+*HTML Code*
+
+```<img src="https://i.imgur.com/r4csVkj.jpeg" alt="CSS Stencil Filter" class="threshold">```
+
+*CSS Code*
+
+```:root{
+--threshold:50%;
+}
+
+.threshold{
+filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+}```
