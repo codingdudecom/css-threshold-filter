@@ -44,4 +44,4 @@ filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%
 
 <!-------------->
 [View Demo Button]: https://img.shields.io/badge/VIEW%20DEMO-2AaB42
-[View Demo]: /docs/
+[View Demo]: https://codingdudecom.github.io/css-threshold-filter/docs/
