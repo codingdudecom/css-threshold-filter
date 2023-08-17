@@ -37,3 +37,10 @@ There are many applications that have a threshold tool including Photoshop, GIMP
 .threshold{
 filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
 }```
+
+[![View Demo Button]][View Demo]
+
+
+<!-------------->
+[View Demo Button]: https://img.shields.io/badge/VIEW%20DEMO-2AaB42
+[View Demo]: /docs/

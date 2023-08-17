@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Threshold Filter by Coding Dude</title>
+	<style type="text/css">
+		:root{
+		  --threshold:50%;
+		}
+
+		body{
+		  font-family:sans-serif;
+		}
+		.g{
+		  display:flex;
+		  gap:1em;
+		}
+		.fit-image{
+		  max-height:100vh;
+		  max-width:30vw;
+		}
+		.threshold{
+		  filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+		}
+
+		.side{
+		  background-color:rgb(255,40,142);
+		  padding:0.5em;
+		  color:white;
+		  display:flex;
+		  flex-direction:column;
+		}
+
+		.side h1{
+		  font-size:10vh;
+		  max-width:1em;
+		}
+		.side a{
+		  color:white;
+		  font-weight:bold;
+		}
+	</style>
+</head>
+<body>
+
+<div class="g">
+ <img src="https://i.imgur.com/r4csVkj.jpeg" alt="CSS Stencil Filter" class="fit-image">
+<img src="https://i.imgur.com/r4csVkj.jpeg" alt="CSS Stencil Filter" class="fit-image threshold">
+<div class="side"><h1>CSS Threshold Fiter</h1>
+  <label for="threshold">Threshold</label><br/>
+  <input type="range" name="threshold" value="50" min="-50" max="200">
+<hr>
+  <small>Read the full article <a href="https://www.coding-dude.com/wp/css/css-threshold-filter/">CSS Threshold Filter</a> by <a href="https://www.coding-dude.com/wp/">Coding Dude</a><br/>Inspired by the <a href="https://www.mockofun.com/template/stencil-maker-from-photo/">Stencil Maker</a> effect on <a href="https://www.mockofun.com/">MockoFun</a></small>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+	const thresholdSlider = document.querySelector("input[name=threshold]");
+	thresholdSlider.addEventListener("input",adjustThreshold);
+	thresholdSlider.addEventListener("change",adjustThreshold);
+
+	function adjustThreshold(){
+	  document.documentElement.style.setProperty('--threshold', `${this.value}%`);
+	}
+</script>
+</body>
+</html>
